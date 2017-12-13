@@ -1,0 +1,75 @@
+*** Settings ***
+
+Library                             Selenium2Library
+Suite Setup                         Open test browser    firefox
+Suite Teardown                      Close test browser
+ 
+*** Test Cases ***
+
+
+Basic Test
+   Go to                            https://crossover.com/
+   Page Should Contain				crossover
+   
+Open Available Jobs
+    sleep                           5s
+    Navigate Jobs
+
+Focus Jobs
+    sleep                           5s
+    Focus                           //input[@placeholder="Job title, keywords"]
+    sleep                           5s
+    
+Type Text
+    Input Text                      //input[@placeholder="Job title, keywords"]   Chief
+    sleep                           5s
+    Click Button                    //*[@id='available-jobs']/div[2]/form/div/div[3]/button
+    sleep                           5s
+
+Check Chief Filter
+    Check Filter                    Chief  
+    Reset Filter
+
+Click Dropdown
+    Click Element                  //*[@labels="data.jobLabels"]
+    Element Should Be Visible      //*[@class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-scope"] 
+    
+Category Java
+    Click Element                  //*[text()="Java"]
+    Check Filter                   Java
+    Reset Filter
+
+Click Companies
+    Click Element                   //*[@class="logo"]
+    Page Should Contain             company
+
+ 
+*** Keywords ***
+
+Open test browser
+   [Arguments]            ${browsers}
+   Open Browser                     about:    browserName=${browsers}
+
+Close test browser
+    Close All Browsers
+
+Check Filter
+    [Arguments]            ${filter}
+    ${LINKSCOUNT}=   Get Matching Xpath Count   //a[@class="panel panel-default ng-scope"]
+    Comment                         Match Links Count
+    Log                             ${LINKSCOUNT}
+    Comment                         Creating Array to Store link Texts
+    :FOR   ${INDEX}   IN RANGE   1   ${LINKSCOUNT}-1
+    \      Log                      ${INDEX}
+    \      Element Should Contain   xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]   ${filter}
+    \      ${LINKTEXT}=   Get Text  xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]
+
+Reset Filter
+    Click Button                    //button[text()="RESET"]
+    ${FILTERVALUE}   Get Element Attribute   //input[@placeholder="Job title, keywords"]@value
+    Should Be Equal   ${FILTERVALUE}   ${EMPTY}
+    
+Navigate Jobs
+    Focus                           //a[text()="Available Jobs"]
+    ${HREF}   Get Element Attribute   //a[text()="Available Jobs"]@href
+    Go To                           ${HREF} 

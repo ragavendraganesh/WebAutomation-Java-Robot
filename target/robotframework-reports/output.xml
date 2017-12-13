@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_151)" generated="20171123 04:51:32.742">
+<suite source="C:\Users\rsubramani\Documents\CrossOverRobot\RobotFrameworkTest\src\test\robotframework\acceptance" name="Acceptance" id="s1">
+<suite source="C:\Users\rsubramani\Documents\CrossOverRobot\RobotFrameworkTest\src\test\robotframework\acceptance\Basic_Tests.txt" name="Basic Tests" id="s1-s1">
+<kw type="setup" name="Open test browser">
+<arguments>
+<arg>firefox</arg>
+</arguments>
+<kw library="Selenium2Library" name="Open Browser">
+<doc>Opens a new browser instance to given URL.&lt;br&gt;</doc>
+<arguments>
+<arg>about:</arg>
+<arg>browserName=${browsers}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:51:34.650">browserName: firefox</msg>
+<msg level="INFO" timestamp="20171123 04:51:34.654">Opening browser 'firefox' to base url 'about:'</msg>
+<status endtime="20171123 04:51:41.600" starttime="20171123 04:51:34.636" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:51:41.619" starttime="20171123 04:51:34.629" status="PASS"></status>
+</kw>
+<test name="Basic Test" id="s1-s1-t1">
+<kw library="Selenium2Library" name="Go To">
+<doc>Navigates the active browser instance to the provided URL.&lt;br&gt;&lt;br&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;url&lt;/b&gt;&amp;nbsp;The URL to open.&lt;br&gt;</doc>
+<arguments>
+<arg>https://crossover.com/</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:51:41.641">Opening url 'https://crossover.com/'</msg>
+<status endtime="20171123 04:51:53.232" starttime="20171123 04:51:41.634" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Page Should Contain">
+<doc>Verify the current page contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>crossover</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:51:54.109">Page Should Contain: crossover =&gt; OK</msg>
+<status endtime="20171123 04:51:54.115" starttime="20171123 04:51:53.243" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:51:54.122" starttime="20171123 04:51:41.622" status="PASS"></status>
+</test>
+<test name="Open Available Jobs" id="s1-s1-t2">
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:51:59.165">Slept 5 seconds</msg>
+<status endtime="20171123 04:51:59.167" starttime="20171123 04:51:54.152" status="PASS"></status>
+</kw>
+<kw name="Navigate Jobs">
+<kw library="Selenium2Library" name="Focus">
+<doc>Set the focus to the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//a[text()="Available Jobs"]</arg>
+</arguments>
+<status endtime="20171123 04:51:59.411" starttime="20171123 04:51:59.173" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Element Attribute">
+<doc>Returns the value of an element attribute.&lt;br&gt;</doc>
+<arguments>
+<arg>//a[text()="Available Jobs"]@href</arg>
+</arguments>
+<assign>
+<var>${HREF}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:51:59.492">${HREF} = https://app.crossover.com/x/#/marketplace/available-jobs</msg>
+<status endtime="20171123 04:51:59.494" starttime="20171123 04:51:59.417" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Go To">
+<doc>Navigates the active browser instance to the provided URL.&lt;br&gt;&lt;br&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;url&lt;/b&gt;&amp;nbsp;The URL to open.&lt;br&gt;</doc>
+<arguments>
+<arg>${HREF}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:51:59.509">Opening url 'https://app.crossover.com/x/#/marketplace/available-jobs'</msg>
+<status endtime="20171123 04:52:11.039" starttime="20171123 04:51:59.498" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:11.041" starttime="20171123 04:51:59.169" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:11.043" starttime="20171123 04:51:54.131" status="PASS"></status>
+</test>
+<test name="Focus Jobs" id="s1-s1-t3">
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:16.086">Slept 5 seconds</msg>
+<status endtime="20171123 04:52:16.089" starttime="20171123 04:52:11.062" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Focus">
+<doc>Set the focus to the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//input[@placeholder="Job title, keywords"]</arg>
+</arguments>
+<status endtime="20171123 04:52:16.151" starttime="20171123 04:52:16.094" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:21.157">Slept 5 seconds</msg>
+<status endtime="20171123 04:52:21.163" starttime="20171123 04:52:16.151" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:21.170" starttime="20171123 04:52:11.051" status="PASS"></status>
+</test>
+<test name="Type Text" id="s1-s1-t4">
+<kw library="Selenium2Library" name="Input Text">
+<doc>Types the given &lt;b&gt;text&lt;/b&gt; into the text field identified by</doc>
+<arguments>
+<arg>//input[@placeholder="Job title, keywords"]</arg>
+<arg>Chief</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:21.203">Typing text 'Chief' into text field '//input[@placeholder="Job title, keywords"]'</msg>
+<status endtime="20171123 04:52:21.469" starttime="20171123 04:52:21.193" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:26.474">Slept 5 seconds</msg>
+<status endtime="20171123 04:52:26.479" starttime="20171123 04:52:21.471" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Button">
+<doc>Click on the button identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//*[@id='available-jobs']/div[2]/form/div/div[3]/button</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:26.497">Clicking button '//*[@id='available-jobs']/div[2]/form/div/div[3]/button'.</msg>
+<status endtime="20171123 04:52:26.997" starttime="20171123 04:52:26.483" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.000">Slept 5 seconds</msg>
+<status endtime="20171123 04:52:32.001" starttime="20171123 04:52:26.998" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:32.003" starttime="20171123 04:52:21.180" status="PASS"></status>
+</test>
+<test name="Check Chief Filter" id="s1-s1-t5">
+<kw name="Check Filter">
+<arguments>
+<arg>Chief</arg>
+</arguments>
+<kw library="Selenium2Library" name="Get Matching Xpath Count">
+<doc>Returns the number of elements located the given &lt;b&gt;xpath&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//a[@class="panel panel-default ng-scope"]</arg>
+</arguments>
+<assign>
+<var>${LINKSCOUNT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:32.067">${LINKSCOUNT} = 25</msg>
+<status endtime="20171123 04:52:32.068" starttime="20171123 04:52:32.013" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Match Links Count</arg>
+</arguments>
+<status endtime="20171123 04:52:32.075" starttime="20171123 04:52:32.069" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${LINKSCOUNT}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.082">25</msg>
+<status endtime="20171123 04:52:32.086" starttime="20171123 04:52:32.077" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Creating Array to Store link Texts</arg>
+</arguments>
+<status endtime="20171123 04:52:32.092" starttime="20171123 04:52:32.089" status="PASS"></status>
+</kw>
+<kw type="for" name="${INDEX} IN RANGE [ 1 | ${LINKSCOUNT}-1 ]">
+<kw type="foritem" name="${INDEX} = 1">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.112">1</msg>
+<status endtime="20171123 04:52:32.114" starttime="20171123 04:52:32.110" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.220">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:32.222" starttime="20171123 04:52:32.115" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:32.307">${LINKTEXT} = Android Chief Software Architect 40h/week $50/hr $100,000/year
+NEW</msg>
+<status endtime="20171123 04:52:32.308" starttime="20171123 04:52:32.223" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:32.309" starttime="20171123 04:52:32.108" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 2">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.315">2</msg>
+<status endtime="20171123 04:52:32.317" starttime="20171123 04:52:32.312" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.418">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:32.420" starttime="20171123 04:52:32.318" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:32.488">${LINKTEXT} = C# (.NET) Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:32.489" starttime="20171123 04:52:32.422" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:32.489" starttime="20171123 04:52:32.310" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 3">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.495">3</msg>
+<status endtime="20171123 04:52:32.497" starttime="20171123 04:52:32.492" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.587">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:32.589" starttime="20171123 04:52:32.498" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:32.675">${LINKTEXT} = C++ Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:32.676" starttime="20171123 04:52:32.591" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:32.676" starttime="20171123 04:52:32.490" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 4">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.682">4</msg>
+<status endtime="20171123 04:52:32.683" starttime="20171123 04:52:32.679" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.751">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:32.752" starttime="20171123 04:52:32.684" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:32.826">${LINKTEXT} = Chief Customer Success Officer &amp; SVP Global Support 40h/week $41,667/month $500,000/year</msg>
+<status endtime="20171123 04:52:32.826" starttime="20171123 04:52:32.754" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:32.827" starttime="20171123 04:52:32.677" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 5">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.830">5</msg>
+<status endtime="20171123 04:52:32.831" starttime="20171123 04:52:32.828" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.896">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:32.897" starttime="20171123 04:52:32.832" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:32.961">${LINKTEXT} = Chief Financial Officer . 40h/week $325/hr $650,000/year</msg>
+<status endtime="20171123 04:52:32.962" starttime="20171123 04:52:32.898" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:32.962" starttime="20171123 04:52:32.827" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 6">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:32.967">6</msg>
+<status endtime="20171123 04:52:32.969" starttime="20171123 04:52:32.965" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.039">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.042" starttime="20171123 04:52:32.971" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.096">${LINKTEXT} = Chief Front End Design Engineer 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:33.096" starttime="20171123 04:52:33.043" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.097" starttime="20171123 04:52:32.964" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 7">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.102">7</msg>
+<status endtime="20171123 04:52:33.104" starttime="20171123 04:52:33.099" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.206">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.208" starttime="20171123 04:52:33.106" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.286">${LINKTEXT} = Chief Growth Officer - $1 mil/year 40h/week $500/hr $1000,000/year</msg>
+<status endtime="20171123 04:52:33.286" starttime="20171123 04:52:33.210" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.287" starttime="20171123 04:52:33.098" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 8">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.292">8</msg>
+<status endtime="20171123 04:52:33.293" starttime="20171123 04:52:33.289" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.372">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.374" starttime="20171123 04:52:33.295" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.429">${LINKTEXT} = Chief Revenue Officer, Inbound Sales 40h/week $250/hr $500,000/year</msg>
+<status endtime="20171123 04:52:33.431" starttime="20171123 04:52:33.375" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.431" starttime="20171123 04:52:33.288" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 9">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.437">9</msg>
+<status endtime="20171123 04:52:33.439" starttime="20171123 04:52:33.434" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.524">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.526" starttime="20171123 04:52:33.441" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.602">${LINKTEXT} = Database Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:33.603" starttime="20171123 04:52:33.527" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.603" starttime="20171123 04:52:33.432" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 10">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.606">10</msg>
+<status endtime="20171123 04:52:33.607" starttime="20171123 04:52:33.604" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.676">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.678" starttime="20171123 04:52:33.608" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.736">${LINKTEXT} = Front End Angular Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:33.737" starttime="20171123 04:52:33.679" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.737" starttime="20171123 04:52:33.604" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 11">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.745">11</msg>
+<status endtime="20171123 04:52:33.747" starttime="20171123 04:52:33.740" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.820">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.821" starttime="20171123 04:52:33.750" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.884">${LINKTEXT} = Front End React Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:33.884" starttime="20171123 04:52:33.822" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.885" starttime="20171123 04:52:33.738" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 12">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.888">12</msg>
+<status endtime="20171123 04:52:33.888" starttime="20171123 04:52:33.886" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.942">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:33.943" starttime="20171123 04:52:33.889" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:33.989">${LINKTEXT} = iOS Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:33.989" starttime="20171123 04:52:33.945" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:33.990" starttime="20171123 04:52:33.885" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 13">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:33.993">13</msg>
+<status endtime="20171123 04:52:33.994" starttime="20171123 04:52:33.991" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.050">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.052" starttime="20171123 04:52:33.994" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.105">${LINKTEXT} = Java Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:34.106" starttime="20171123 04:52:34.053" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.106" starttime="20171123 04:52:33.990" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 14">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.110">14</msg>
+<status endtime="20171123 04:52:34.112" starttime="20171123 04:52:34.109" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.170">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.171" starttime="20171123 04:52:34.114" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.222">${LINKTEXT} = JavaScript Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:34.223" starttime="20171123 04:52:34.172" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.223" starttime="20171123 04:52:34.107" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 15">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.228">15</msg>
+<status endtime="20171123 04:52:34.229" starttime="20171123 04:52:34.225" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.286">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.287" starttime="20171123 04:52:34.230" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.355">${LINKTEXT} = Lisp Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:34.355" starttime="20171123 04:52:34.288" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.356" starttime="20171123 04:52:34.224" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 16">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.358">16</msg>
+<status endtime="20171123 04:52:34.359" starttime="20171123 04:52:34.357" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.412">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.415" starttime="20171123 04:52:34.360" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.470">${LINKTEXT} = NetSuite Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:34.470" starttime="20171123 04:52:34.417" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.471" starttime="20171123 04:52:34.356" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 17">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.474">17</msg>
+<status endtime="20171123 04:52:34.474" starttime="20171123 04:52:34.472" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.526">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.527" starttime="20171123 04:52:34.475" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.590">${LINKTEXT} = PHP Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:34.591" starttime="20171123 04:52:34.528" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.591" starttime="20171123 04:52:34.471" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 18">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.596">18</msg>
+<status endtime="20171123 04:52:34.597" starttime="20171123 04:52:34.594" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.662">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.664" starttime="20171123 04:52:34.599" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.757">${LINKTEXT} = Ruby on Rails Chief Software Architect 40h/week $50/hr $100,000/year
+NEW</msg>
+<status endtime="20171123 04:52:34.758" starttime="20171123 04:52:34.665" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.759" starttime="20171123 04:52:34.592" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 19">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.763">19</msg>
+<status endtime="20171123 04:52:34.765" starttime="20171123 04:52:34.761" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.830">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.831" starttime="20171123 04:52:34.766" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:34.892">${LINKTEXT} = SaaS Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:34.894" starttime="20171123 04:52:34.832" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:34.894" starttime="20171123 04:52:34.760" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 20">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.899">20</msg>
+<status endtime="20171123 04:52:34.900" starttime="20171123 04:52:34.897" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:34.967">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:34.968" starttime="20171123 04:52:34.901" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:35.028">${LINKTEXT} = Salesforce Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:35.029" starttime="20171123 04:52:34.970" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:35.030" starttime="20171123 04:52:34.896" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 21">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.034">21</msg>
+<status endtime="20171123 04:52:35.035" starttime="20171123 04:52:35.032" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.090">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:35.091" starttime="20171123 04:52:35.036" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:35.142">${LINKTEXT} = SAP Chief Software Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:35.142" starttime="20171123 04:52:35.091" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:35.143" starttime="20171123 04:52:35.031" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 22">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.146">22</msg>
+<status endtime="20171123 04:52:35.147" starttime="20171123 04:52:35.144" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.222">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:35.223" starttime="20171123 04:52:35.148" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:35.287">${LINKTEXT} = Scala Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:35.288" starttime="20171123 04:52:35.224" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:35.288" starttime="20171123 04:52:35.143" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 23">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.291">23</msg>
+<status endtime="20171123 04:52:35.292" starttime="20171123 04:52:35.289" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Contain">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+<arg>${filter}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.348">Element Should Contain: Chief =&gt; OK</msg>
+<status endtime="20171123 04:52:35.350" starttime="20171123 04:52:35.293" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Text">
+<doc>Returns the text of the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>xpath=(//a[@class="panel panel-default ng-scope"])[${INDEX}]</arg>
+</arguments>
+<assign>
+<var>${LINKTEXT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:35.399">${LINKTEXT} = Test Automation Chief Architect 40h/week $50/hr $100,000/year</msg>
+<status endtime="20171123 04:52:35.399" starttime="20171123 04:52:35.351" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:35.400" starttime="20171123 04:52:35.288" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:35.400" starttime="20171123 04:52:32.094" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:35.401" starttime="20171123 04:52:32.009" status="PASS"></status>
+</kw>
+<kw name="Reset Filter">
+<kw library="Selenium2Library" name="Click Button">
+<doc>Click on the button identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//button[text()="RESET"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:35.405">Clicking button '//button[text()="RESET"]'.</msg>
+<status endtime="20171123 04:52:36.087" starttime="20171123 04:52:35.402" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Element Attribute">
+<doc>Returns the value of an element attribute.&lt;br&gt;</doc>
+<arguments>
+<arg>//input[@placeholder="Job title, keywords"]@value</arg>
+</arguments>
+<assign>
+<var>${FILTERVALUE}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:36.208">${FILTERVALUE} = </msg>
+<status endtime="20171123 04:52:36.209" starttime="20171123 04:52:36.090" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${FILTERVALUE}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:36.217">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status endtime="20171123 04:52:36.219" starttime="20171123 04:52:36.211" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:36.223" starttime="20171123 04:52:35.401" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:36.225" starttime="20171123 04:52:32.006" status="PASS"></status>
+</test>
+<test name="Click Dropdown" id="s1-s1-t6">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click on the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//*[@labels="data.jobLabels"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:36.245">Clicking element '//*[@labels="data.jobLabels"]'.</msg>
+<status endtime="20171123 04:52:37.691" starttime="20171123 04:52:36.239" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Element Should Be Visible">
+<doc>Verify the element identified by &lt;b&gt;locator&lt;/b&gt; is visible.&lt;br&gt;</doc>
+<arguments>
+<arg>//*[@class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-scope"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:37.699">Verifying element '//*[@class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-scope"]' is visible.</msg>
+<status endtime="20171123 04:52:37.829" starttime="20171123 04:52:37.693" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:37.831" starttime="20171123 04:52:36.228" status="PASS"></status>
+</test>
+<test name="Category Java" id="s1-s1-t7">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click on the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//*[text()="Java"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:37.842">Clicking element '//*[text()="Java"]'.</msg>
+<status endtime="20171123 04:52:38.395" starttime="20171123 04:52:37.837" status="PASS"></status>
+</kw>
+<kw name="Check Filter">
+<arguments>
+<arg>Java</arg>
+</arguments>
+<kw library="Selenium2Library" name="Get Matching Xpath Count">
+<doc>Returns the number of elements located the given &lt;b&gt;xpath&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//a[@class="panel panel-default ng-scope"]</arg>
+</arguments>
+<assign>
+<var>${LINKSCOUNT}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:38.532">${LINKSCOUNT} = 0</msg>
+<status endtime="20171123 04:52:38.533" starttime="20171123 04:52:38.399" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Match Links Count</arg>
+</arguments>
+<status endtime="20171123 04:52:38.540" starttime="20171123 04:52:38.535" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${LINKSCOUNT}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:38.545">0</msg>
+<status endtime="20171123 04:52:38.547" starttime="20171123 04:52:38.542" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Creating Array to Store link Texts</arg>
+</arguments>
+<status endtime="20171123 04:52:38.551" starttime="20171123 04:52:38.548" status="PASS"></status>
+</kw>
+<kw type="for" name="${INDEX} IN RANGE [ 1 | ${LINKSCOUNT}-1 ]">
+<status endtime="20171123 04:52:38.559" starttime="20171123 04:52:38.552" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:38.562" starttime="20171123 04:52:38.396" status="PASS"></status>
+</kw>
+<kw name="Reset Filter">
+<kw library="Selenium2Library" name="Click Button">
+<doc>Click on the button identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//button[text()="RESET"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:38.572">Clicking button '//button[text()="RESET"]'.</msg>
+<status endtime="20171123 04:52:40.355" starttime="20171123 04:52:38.567" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Get Element Attribute">
+<doc>Returns the value of an element attribute.&lt;br&gt;</doc>
+<arguments>
+<arg>//input[@placeholder="Job title, keywords"]@value</arg>
+</arguments>
+<assign>
+<var>${FILTERVALUE}</var>
+</assign>
+<msg level="INFO" timestamp="20171123 04:52:40.471">${FILTERVALUE} = </msg>
+<status endtime="20171123 04:52:40.472" starttime="20171123 04:52:40.357" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${FILTERVALUE}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:40.485">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status endtime="20171123 04:52:40.487" starttime="20171123 04:52:40.479" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:40.489" starttime="20171123 04:52:38.563" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:40.490" starttime="20171123 04:52:37.834" status="PASS"></status>
+</test>
+<test name="Click Companies" id="s1-s1-t8">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click on the element identified by &lt;b&gt;locator&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>//*[@class="logo"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:40.499">Clicking element '//*[@class="logo"]'.</msg>
+<status endtime="20171123 04:52:41.346" starttime="20171123 04:52:40.496" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Page Should Contain">
+<doc>Verify the current page contains &lt;b&gt;text&lt;/b&gt;.&lt;br&gt;</doc>
+<arguments>
+<arg>company</arg>
+</arguments>
+<msg level="INFO" timestamp="20171123 04:52:46.317">Page Should Contain: company =&gt; OK</msg>
+<status endtime="20171123 04:52:46.318" starttime="20171123 04:52:41.346" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171123 04:52:46.319" starttime="20171123 04:52:40.492" status="PASS"></status>
+</test>
+<kw type="teardown" name="Close test browser">
+<kw library="Selenium2Library" name="Close All Browsers">
+<doc>Closes all open browser instances and resets the browser cache.&lt;br&gt;</doc>
+<status endtime="20171123 04:52:49.139" starttime="20171123 04:52:46.358" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:49.142" starttime="20171123 04:52:46.352" status="PASS"></status>
+</kw>
+<status endtime="20171123 04:52:49.142" starttime="20171123 04:51:33.231" status="PASS"></status>
+</suite>
+<status endtime="20171123 04:52:49.227" starttime="20171123 04:51:32.774" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" name="Acceptance" id="s1">Acceptance</stat>
+<stat pass="8" fail="0" name="Basic Tests" id="s1-s1">Acceptance.Basic Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
